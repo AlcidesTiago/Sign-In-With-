@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,84 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" image="Background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSb-Ka-aEc">
+                                <rect key="frame" x="0.0" y="-8" width="375" height="675"/>
+                                <viewLayoutGuide key="safeArea" id="86G-43-jeF"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jk5-P7-Mtd">
+                                <rect key="frame" x="45" y="299" width="285" height="69"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sig in with Facebook" backgroundImage="FB">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR7-Fg-uRI">
+                                <rect key="frame" x="45" y="378" width="285" height="69"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sig in with Google" backgroundImage="Google">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSc-tx-CHN">
+                                <rect key="frame" x="45" y="457" width="285" height="69"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sig in with Email" backgroundImage="Email">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tq-iZ-VKS">
+                                <rect key="frame" x="73" y="265" width="229.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="2zc-zi-27S">
+                                <rect key="frame" x="125" y="70" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="PzM-gF-x8P"/>
+                                    <constraint firstAttribute="width" constant="125" id="fdJ-ga-B6F"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZSc-tx-CHN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ap-nD-Qn8"/>
+                            <constraint firstItem="zSb-Ka-aEc" firstAttribute="topMargin" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EeN-O0-uKK"/>
+                            <constraint firstItem="2zc-zi-27S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="HUD-tm-EUl"/>
+                            <constraint firstItem="6tq-iZ-VKS" firstAttribute="top" secondItem="2zc-zi-27S" secondAttribute="bottom" constant="70" id="T3u-ZO-z16"/>
+                            <constraint firstItem="Jk5-P7-Mtd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uch-sD-my3"/>
+                            <constraint firstItem="zSb-Ka-aEc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VfU-3N-spy"/>
+                            <constraint firstItem="jR7-Fg-uRI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJa-Tx-dWR"/>
+                            <constraint firstItem="ZSc-tx-CHN" firstAttribute="top" secondItem="jR7-Fg-uRI" secondAttribute="bottom" constant="10" id="eRH-Ll-Q4O"/>
+                            <constraint firstAttribute="bottom" secondItem="zSb-Ka-aEc" secondAttribute="bottom" id="fUV-Vt-7TS"/>
+                            <constraint firstItem="Jk5-P7-Mtd" firstAttribute="top" secondItem="6tq-iZ-VKS" secondAttribute="bottom" constant="10" id="hO0-wG-Ugd"/>
+                            <constraint firstItem="jR7-Fg-uRI" firstAttribute="top" secondItem="Jk5-P7-Mtd" secondAttribute="bottom" constant="10" id="i8A-pX-cHm"/>
+                            <constraint firstAttribute="trailing" secondItem="zSb-Ka-aEc" secondAttribute="trailing" id="mr9-bL-6qh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2zc-zi-27S" secondAttribute="trailing" constant="125" id="ta3-CP-APq"/>
+                            <constraint firstItem="6tq-iZ-VKS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vfO-2n-ota"/>
+                            <constraint firstItem="2zc-zi-27S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="zuz-sF-aM1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="Email" width="285" height="69"/>
+        <image name="FB" width="285" height="69"/>
+        <image name="Google" width="285" height="69"/>
+        <image name="Logo" width="1024" height="1024"/>
+    </resources>
 </document>
